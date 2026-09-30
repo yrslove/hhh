@@ -1,0 +1,96 @@
+{
+  "ready": true,
+  "formData": {
+    "procedureRef": "7FD8C880-28B7-46FE-818B-3D4F6B727F40",
+    "patientRef": "A7360674-B25B-4D2C-8E5C-AE8C6EF4BECB",
+    "selectedReferralCode": "digitalReferral",
+    "serviceCode": "(96130-00) Навчання навичок, що стосуються положення/рухомості/рухів тіла",
+    "performerRef": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+    "division": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+    "procedureCategoryRef": "procedure",
+    "procedureStatus": "completed",
+    "procedureOutcome": "procedure_done",
+    "report_originsCode": "primary_source",
+    "procedure_primary_source": true,
+    "isDateOrPeriod": "true",
+    "procedurePeriod": null,
+    "date": "2026-09-24T23:46:35.267",
+    "dateStart": "2026-09-24T23:46:35.267",
+    "dateEnd": "2026-09-24T23:46:35.267"
+  },
+  "dxFormData": {
+    "procedureRef": null,
+    "patientRef": null,
+    "selectedReferralCode": null,
+    "serviceCode": "(96130-00) Навчання навичок, що стосуються положення/рухомості/рухів тіла",
+    "performerRef": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+    "division": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+    "procedureCategoryRef": "procedure",
+    "procedureStatus": "completed",
+    "procedureOutcome": "procedure_done",
+    "report_originsCode": "primary_source",
+    "procedure_primary_source": true,
+    "isDateOrPeriod": "true",
+    "procedurePeriod": null,
+    "date": "2026-09-24T23:46:35.267",
+    "dateStart": "2026-09-24T23:46:35.267",
+    "dateEnd": "2026-09-24T23:46:35.267"
+  },
+  "editors": {
+    "procedureCategoryRef": {
+      "display": "Процедура",
+      "value": "procedure",
+      "dataSourceReady": true
+    },
+    "originsCode": {
+      "display": "первинне джерело даних",
+      "value": "primary_source",
+      "dataSourceReady": true
+    },
+    "performerRef": {
+      "display": "Пальчик Ярослава Валентинівна (Фізичний терапевт)",
+      "value": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+      "dataSourceReady": true
+    },
+    "serviceCode": {
+      "display": "(96130-00) Навчання навичок, що стосуються положення/рухомості/рухів тіла",
+      "value": "(96130-00) Навчання навичок, що стосуються положення/рухомості/рухів тіла",
+      "dataSourceReady": true
+    },
+    "procedureStatus": {
+      "display": "Виконана",
+      "value": "completed",
+      "dataSourceReady": true
+    },
+    "isDateOrPeriod": {
+      "display": "Період",
+      "value": "true",
+      "dataSourceReady": true
+    },
+    "division": {
+      "display": "ТОВ 2 \\\"МІЖНАРОДНИЙ ЦЕНТР РЕАБІЛІТАЦІЇ ТА НЕЙРОФІЗІОЛОГІЇ\\\" 2",
+      "value": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+      "dataSourceReady": true
+    },
+    "dateStart": {
+      "display": "24.09.2026, 23:46",
+      "value": "2026-09-24T23:46:35.267",
+      "dataSourceReady": true
+    },
+    "dateEnd": {
+      "display": "24.09.2026, 23:46",
+      "value": "2026-09-24T23:46:35.267",
+      "dataSourceReady": true
+    },
+    "procedurePeriod": {
+      "display": "",
+      "value": null,
+      "dataSourceReady": true
+    },
+    "procedureOutcome": {
+      "display": "Процедура проведена успішно",
+      "value": "procedure_done",
+      "dataSourceReady": true
+    }
+  }
+}

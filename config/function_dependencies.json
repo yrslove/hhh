@@ -1,0 +1,209 @@
+{
+  "procedures_create": {
+    "module": "app.workflows.procedures",
+    "uses": [
+      "app.excel.schedule",
+      "app.excel.workbook",
+      "app.automation.browser"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "procedures_batch_sign": {
+    "module": "app.workflows.procedures",
+    "uses": [
+      "app.automation.browser"
+    ],
+    "files": [],
+    "depends_on": [
+      "procedures_create"
+    ]
+  },
+  "important_000": {
+    "module": "app.workflows.schedule_checks",
+    "uses": [
+      "app.excel.schedule"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "check_frm_before_etft": {
+    "module": "app.workflows.schedule_checks",
+    "uses": [
+      "app.excel.schedule"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "check_etft_overlaps": {
+    "module": "app.workflows.schedule_checks",
+    "uses": [
+      "app.excel.schedule"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "coordinator_to_graph": {
+    "module": "app.workflows.intake",
+    "uses": [
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Координатори",
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "desktop_neurologist_report": {
+    "module": "app.workflows.intake",
+    "uses": [
+      "app.automation.desktop"
+    ],
+    "files": [],
+    "depends_on": [
+      "coordinator_to_graph"
+    ]
+  },
+  "diagnosis_prepare": {
+    "module": "app.workflows.intake",
+    "uses": [
+      "app.excel.workbook",
+      "SQLite extracted_documents"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "desktop_neurologist_report"
+    ]
+  },
+  "diagnostic_interaction": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "diagnosis_prepare"
+    ]
+  },
+  "first_rehab_interaction": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": []
+  },
+  "procedure_counts": {
+    "module": "app.workflows.procedure_counts",
+    "uses": ["app.excel.schedule"],
+    "files": ["Графік 1"],
+    "depends_on": []
+  },
+  "rehab_referral_from_diagnostic": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "diagnostic_interaction"
+    ]
+  },
+  "rehab_interaction": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "rehab_referral_from_diagnostic"
+    ]
+  },
+  "rehab_referral_after_interaction": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "rehab_interaction"
+    ]
+  },
+  "care_plan_draft": {
+    "module": "app.workflows.first_interaction",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Координатори",
+      "Графік 1"
+    ],
+    "depends_on": [
+      "rehab_interaction"
+    ]
+  },
+  "care_plan_submit": {
+    "module": "app.workflows.care_plan",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Координатори"
+    ],
+    "depends_on": [
+      "care_plan_draft"
+    ]
+  },
+  "primary_prescriptions": {
+    "module": "app.workflows.care_plan",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Графік 1",
+      "Координатори"
+    ],
+    "depends_on": [
+      "care_plan_submit"
+    ]
+  },
+  "referrals_from_prescriptions": {
+    "module": "app.workflows.care_plan",
+    "uses": [
+      "app.automation.browser",
+      "app.excel.workbook"
+    ],
+    "files": [
+      "Графік 1"
+    ],
+    "depends_on": [
+      "primary_prescriptions"
+    ]
+  }
+}

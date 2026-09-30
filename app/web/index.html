@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor Eleks Automation</title>
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <strong>Doctor Eleks Automation</strong>
+    <span>локальний робочий інтерфейс</span>
+  </div>
+  <div class="topbar-right">
+    <div id="actionStatus" class="action-status" hidden>
+      <div class="action-status-row"><span id="actionStatusText">Виконується…</span><button id="cancelActions" class="stop-btn" type="button">Зупинити</button></div>
+      <progress id="actionProgress" max="100" value="0"></progress>
+    </div>
+    <span id="workbookTop">Excel не підключено</span>
+    <span>127.0.0.1</span>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <nav>
+    <button class="nav is-active" data-view="overview">Огляд</button>
+    <button class="nav" data-view="functions">Функції</button>
+    <button class="nav" data-view="results">Результати перевірок</button>
+    <button class="nav" data-view="logs">Журнал</button>
+    <button class="nav" data-view="settings">Налаштування</button>
+  </nav>
+  <div class="sidebar-foot">
+    <div>Версія 1.0</div>
+    <div>Локальний режим</div>
+  </div>
+</aside>
+
+<main class="content">
+<section class="view is-visible" id="view-overview">
+  <div class="heading">
+    <div>
+      <h1>Огляд</h1>
+      <p>Запускайте робочі дії. Технічний імпорт, SQLite та перевірки стану виконуються всередині програми.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <div><h2>Робочий Excel</h2><p>Файл потрібен для графіка, перевірок ФРМ/ЕТ-ФТ та процедур.</p></div>
+    </div>
+    <div class="upload-row">
+      <input id="workbookFile" type="file" accept=".xlsx,.xlsm">
+      <button id="uploadWorkbook" class="btn">Підключити Excel</button>
+    </div>
+    <div class="file-status"><span>Поточний файл</span><strong id="currentWorkbook">не підключено</strong></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><div><h2>Швидкий доступ</h2><p>На початку — процедури та важлива перевірка розкладу.</p></div></div>
+    <div id="quickFunctions" class="quick-grid"></div>
+  </div>
+</section>
+
+<section class="view" id="view-functions">
+  <div class="heading">
+    <div><h1>Функції</h1><p>Перетягуйте функції між групами та змінюйте порядок. Назву й особисту примітку можна змінити у вікні функції.</p></div>
+    <button id="createGroup" class="btn btn-secondary">Створити групу</button>
+  </div>
+  <div id="groupList" class="groups"></div>
+</section>
+
+<section class="view" id="view-results">
+  <div class="heading">
+    <div><h1>Результати перевірок</h1><p>Останній результат перевірки графіка або кількості процедур буде показано тут після запуску.</p></div>
+  </div>
+  <div id="resultsEmpty" class="panel empty">Перевірки ще не запускалися в цій сесії.</div>
+  <div id="resultsContent"></div>
+</section>
+
+<section class="view" id="view-logs">
+  <div class="heading">
+    <div><h1>Журнал</h1><p>Фіксуються запуски функцій, браузерні дії, Excel-зміни, помилки та контрольні точки. Паролі КЕП і OTP не логуються.</p></div>
+    <button id="refreshLogs" class="btn btn-secondary">Оновити</button>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Час</th><th>Рівень</th><th>Функція</th><th>Подія</th><th>Повідомлення</th><th>Деталі</th></tr></thead>
+      <tbody id="logsBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="view" id="view-settings">
+  <div class="heading">
+    <div><h1>Налаштування</h1><p>Шляхи й доступи задаються один раз. Паролі КЕП тут не зберігаються.</p></div>
+    <button id="saveSettings" class="btn">Зберегти</button>
+  </div>
+  <div class="settings-grid">
+    <div class="panel">
+      <h2>Файли</h2>
+      <label class="field"><span>Графік 1 — шлях</span><input id="s_graph1_path" type="text"></label>
+      <label class="field"><span>Таблиця координаторів — шлях</span><input id="s_coordinators_path" type="text"></label>
+      <label class="field"><span>Doctor Eleks Desktop EXE</span><input id="s_desktop_eleks_path" type="text"></label>
+    </div>
+    <div class="panel">
+      <h2>Doctor Eleks Web</h2>
+      <label class="field"><span>Адреса eHealth/Doctor Eleks (обов'язково для web-функцій)</span><input id="s_ehealth_base_url" type="url" placeholder="https://..."></label>
+      <label class="field"><span>Chrome/Edge EXE (можна порожнім)</span><input id="s_browser_executable" type="text"></label>
+      <label class="field"><span>Remote debugging port</span><input id="s_remote_debug_port" type="number" value="9222"></label>
+      <label class="check"><input id="s_safe_mode" type="checkbox"><span>Безпечний режим: не натискати фінальні кнопки підпису</span></label>
+    </div>
+    <div class="panel">
+      <h2>Вкладки Excel</h2>
+      <label class="field"><span>ФРМ</span><input id="s_frm_sheet" type="text"></label>
+      <label class="field"><span>ЕТ/ФТ</span><input id="s_etft_sheet" type="text"></label>
+      <label class="field"><span>Основний розподіл</span><input id="s_distribution_sheet" type="text"></label>
+      <label class="field"><span>Вкладка координаторів (порожньо = перша)</span><input id="s_coordinator_sheet" type="text"></label>
+      <label class="field"><span>Рік графіка</span><input id="s_schedule_year" type="number"></label>
+    </div>
+    <div class="panel">
+      <h2>Спеціалісти</h2>
+      <p class="muted">JSON-словник для зв'язку ПІБ спеціаліста з типом ET/FT/Psych. Наприклад: {"Халай Тимофій":{"type":"ET"}}</p>
+      <textarea id="s_specialists" rows="10"></textarea>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+
+<div id="backdrop" class="backdrop" hidden></div>
+<aside id="functionDrawer" class="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <div>
+      <div id="drawerGroup" class="eyebrow"></div><div id="drawerId" class="system-id"></div>
+      <h2 id="drawerTitle"></h2>
+    </div>
+    <button id="closeDrawer" class="icon-btn" aria-label="Закрити">×</button>
+  </div>
+  <div class="drawer-body">
+    <p id="drawerShort" class="lead"></p>
+    <div id="drawerNoteBox" class="note-box" hidden><strong>Моя примітка</strong><div id="drawerNote"></div></div>
+    <div class="section"><h3>Що виконує і в якій послідовності</h3><ol id="drawerSequence"></ol></div>
+    <div class="section"><h3>Потрібні файли / дані</h3><ul id="drawerFiles"></ul></div>
+    <div class="section"><h3>Потрібні доступи</h3><ul id="drawerAccess"></ul></div>
+    <div class="section"><h3>Ручні точки</h3><ul id="drawerManual"></ul></div>
+    <div class="section"><h3>Параметри запуску</h3><div id="drawerParams" class="params"></div></div>
+    <div id="actionResult" class="result-box" hidden></div>
+    <div class="section customize">
+      <h3>Моя структура</h3>
+      <label class="field"><span>Назва функції</span><input id="customTitle" maxlength="120"></label>
+      <label class="field"><span>Підпис / примітка до 300 символів</span><textarea id="customNote" maxlength="300" rows="4"></textarea><small id="noteCounter">0/300</small></label>
+      <label class="field"><span>Група</span><select id="customGroup"></select></label>
+      <button id="saveCustomization" class="btn btn-secondary">Зберегти назву і примітку</button>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button id="closeDrawer2" class="btn btn-secondary">Закрити</button>
+    <button id="continueFunction" class="btn" hidden>Продовжити</button>
+    <button id="runFunction" class="btn">Виконати функцію</button>
+  </div>
+</aside>
+
+<div id="toastStack" class="toasts"></div>
+
+<div id="simpleModal" class="small-modal" hidden>
+  <div class="small-modal-card">
+    <h2 id="simpleTitle"></h2>
+    <label class="field"><span id="simpleLabel">Назва</span><input id="simpleInput" maxlength="80"></label>
+    <div class="modal-actions"><button id="simpleCancel" class="btn btn-secondary">Скасувати</button><button id="simpleOk" class="btn">Зберегти</button></div>
+  </div>
+</div>
+<script src="/static/js/app.js"></script>
+</body>
+</html>

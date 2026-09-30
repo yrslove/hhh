@@ -1,0 +1,23 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local runtime state
+data/*.db
+data/*.db-*
+logs/*.jsonl
+runtime/active_port.txt
+runtime/*browser_profile*/
+runtime/procedure_valeriia_profile/

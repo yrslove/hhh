@@ -1,0 +1,68 @@
+{
+  "ready": true,
+  "formData": {
+    "patientFirstName": "Ярина",
+    "patientLastName": "Приліпко",
+    "patientSecondName": "Димитріївна",
+    "patientBirthDate": "2023-01-01",
+    "patientAge": 3,
+    "patientGender": "жіноча",
+    "patientDeclarationNumber": "",
+    "patientDeclarationID": "",
+    "patientAgeExternal": "0",
+    "verificationStatusText": "Верифіковано",
+    "patientRef": "A7360674-B25B-4D2C-8E5C-AE8C6EF4BECB",
+    "patientShortName": "Приліпко Я. Д.",
+    "patient_nhs_verification_statusText": "Успішна верифікація",
+    "patient_drfo_verification_statusText": "Успішна верифікація",
+    "patient_dracs_death_verification_statusText": "Потребує верифікації",
+    "declarationInfoText": ""
+  },
+  "editors": {
+    "patientLastName": {
+      "display": "Приліпко",
+      "value": "Приліпко",
+      "dataSourceReady": true
+    },
+    "patientFirstName": {
+      "display": "Ярина",
+      "value": "Ярина",
+      "dataSourceReady": true
+    },
+    "patientSecondName": {
+      "display": "Димитріївна",
+      "value": "Димитріївна",
+      "dataSourceReady": true
+    },
+    "patientBirthDate": {
+      "display": "2023-01-01",
+      "value": "2023-01-01",
+      "dataSourceReady": true
+    },
+    "patientAge": {
+      "display": "3",
+      "value": 3,
+      "dataSourceReady": true
+    },
+    "patientGender": {
+      "display": "жіноча",
+      "value": "жіноча",
+      "dataSourceReady": true
+    },
+    "patientRef": {
+      "display": "A7360674-B25B-4D2C-8E5C-AE8C6EF4BECB",
+      "value": "A7360674-B25B-4D2C-8E5C-AE8C6EF4BECB",
+      "dataSourceReady": true
+    },
+    "verificationStatusText": {
+      "display": "Верифіковано",
+      "value": "Верифіковано",
+      "dataSourceReady": true
+    },
+    "statusText": {
+      "display": "",
+      "value": "",
+      "dataSourceReady": true
+    }
+  }
+}

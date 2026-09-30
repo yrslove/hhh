@@ -1,0 +1,10 @@
+{
+  "payload": {
+    "procedurePeriod": null
+  },
+  "response": {
+    "error": "bad"
+  },
+  "status": 500,
+  "last_action": "FIELD_BATCH_BEGIN"
+}

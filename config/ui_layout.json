@@ -1,0 +1,139 @@
+{
+  "groups": [
+    {
+      "id": "procedures",
+      "title": "Процедури",
+      "order": 0
+    },
+    {
+      "id": "important",
+      "title": "IMPORTANT_000",
+      "order": 1
+    },
+    {
+      "id": "intake",
+      "title": "Пацієнт, документи та діагнози",
+      "order": 2
+    },
+    {
+      "id": "first_interaction",
+      "title": "Перша взаємодія",
+      "order": 3
+    },
+    {
+      "id": "care_plan",
+      "title": "План лікування, призначення і направлення",
+      "order": 4
+    }
+  ],
+  "functions": {
+    "procedures_create": {
+      "title": "Внести процедури",
+      "note": "",
+      "group_id": "important",
+      "order": 3
+    },
+    "procedures_batch_sign": {
+      "title": "Пакетно підписати процедури",
+      "note": "",
+      "group_id": "procedures",
+      "order": 0
+    },
+    "important_000": {
+      "title": "ЕТ_ФТ_ФРМ_Пересечение времени",
+      "note": "",
+      "group_id": "important",
+      "order": 0
+    },
+    "check_frm_before_etft": {
+      "title": "Перевірити ФРМ → ЕТ/ФТ",
+      "note": "",
+      "group_id": "important",
+      "order": 4
+    },
+    "check_etft_overlaps": {
+      "title": "Перевірити перетини ЕТ/ФТ",
+      "note": "",
+      "group_id": "important",
+      "order": 5
+    },
+    "procedure_counts": {
+      "title": "Кол-во процедур",
+      "note": "",
+      "group_id": "important",
+      "order": 1
+    },
+    "coordinator_to_graph": {
+      "title": "Перенести пацієнта з таблиці координаторів у Графік 1",
+      "note": "",
+      "group_id": "intake",
+      "order": 0
+    },
+    "desktop_neurologist_report": {
+      "title": "Знайти висновок невролога",
+      "note": "",
+      "group_id": "intake",
+      "order": 1
+    },
+    "diagnosis_prepare": {
+      "title": "Підготувати діагнози",
+      "note": "",
+      "group_id": "intake",
+      "order": 2
+    },
+    "diagnostic_interaction": {
+      "title": "Створити першу взаємодію — Діагностика",
+      "note": "",
+      "group_id": "first_interaction",
+      "order": 0
+    },
+    "rehab_referral_from_diagnostic": {
+      "title": "Створити направлення на нестаціонарну реабілітацію",
+      "note": "",
+      "group_id": "first_interaction",
+      "order": 1
+    },
+    "rehab_interaction": {
+      "title": "Створити першу взаємодію — Реабілітація",
+      "note": "",
+      "group_id": "first_interaction",
+      "order": 2
+    },
+    "rehab_referral_after_interaction": {
+      "title": "Створити направлення після реабілітаційної взаємодії",
+      "note": "",
+      "group_id": "first_interaction",
+      "order": 3
+    },
+    "care_plan_draft": {
+      "title": "Створити чернетку плану лікування",
+      "note": "",
+      "group_id": "first_interaction",
+      "order": 4
+    },
+    "care_plan_submit": {
+      "title": "Подати план лікування",
+      "note": "",
+      "group_id": "care_plan",
+      "order": 0
+    },
+    "primary_prescriptions": {
+      "title": "Створити первинні призначення",
+      "note": "",
+      "group_id": "care_plan",
+      "order": 1
+    },
+    "referrals_from_prescriptions": {
+      "title": "Створити направлення з первинних призначень",
+      "note": "",
+      "group_id": "care_plan",
+      "order": 2
+    },
+    "first_rehab_interaction": {
+      "title": "1 ВЗАЄМОДІЯ",
+      "note": "",
+      "group_id": "important",
+      "order": 2
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "ready": true,
+  "formData": {
+    "procedureRef": "3FA13661-B339-4DFC-99AE-B521C70C9675",
+    "patientRef": "A7360674-B25B-4D2C-8E5C-AE8C6EF4BECB",
+    "selectedReferralCode": "digitalReferral",
+    "serviceCode": null,
+    "performerRef": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+    "division": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+    "procedureCategoryRef": "procedure",
+    "procedureStatus": "completed",
+    "procedureOutcome": "procedure_done",
+    "report_originsCode": "primary_source",
+    "procedure_primary_source": true,
+    "isDateOrPeriod": "false",
+    "procedurePeriod": null,
+    "date": "2026-09-02T15:00:00.000Z",
+    "dateStart": "2026-09-02T15:00:00.000Z",
+    "dateEnd": "2026-09-02T15:30:00.000Z"
+  },
+  "dxFormData": {
+    "procedureRef": null,
+    "patientRef": null,
+    "selectedReferralCode": null,
+    "serviceCode": null,
+    "performerRef": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+    "division": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+    "procedureCategoryRef": "procedure",
+    "procedureStatus": "completed",
+    "procedureOutcome": "procedure_done",
+    "report_originsCode": "primary_source",
+    "procedure_primary_source": true,
+    "isDateOrPeriod": "false",
+    "procedurePeriod": null,
+    "date": "2026-09-02T15:00:00.000Z",
+    "dateStart": "2026-09-02T15:00:00.000Z",
+    "dateEnd": "2026-09-02T15:30:00.000Z"
+  },
+  "editors": {
+    "procedureCategoryRef": {
+      "display": "Процедура",
+      "value": "procedure",
+      "dataSourceReady": true
+    },
+    "originsCode": {
+      "display": "первинне джерело даних",
+      "value": "primary_source",
+      "dataSourceReady": true
+    },
+    "performerRef": {
+      "display": "Пальчик Ярослава Валентинівна (Фізичний терапевт)",
+      "value": "c89ae435-cebb-40b5-a578-cb1ce616b55a",
+      "dataSourceReady": true
+    },
+    "serviceCode": {
+      "display": "",
+      "value": "",
+      "dataSourceReady": true
+    },
+    "procedureStatus": {
+      "display": "Виконана",
+      "value": "completed",
+      "dataSourceReady": true
+    },
+    "isDateOrPeriod": {
+      "display": "Дата",
+      "value": "false",
+      "dataSourceReady": true
+    },
+    "division": {
+      "display": "ТОВ 2 \\\"МІЖНАРОДНИЙ ЦЕНТР РЕАБІЛІТАЦІЇ ТА НЕЙРОФІЗІОЛОГІЇ\\\" 2",
+      "value": "75EACEBC-5AF3-4B70-A6CA-572AD6281BF4",
+      "dataSourceReady": true
+    },
+    "date": {
+      "display": "02.09.2026, 18:00",
+      "value": "2026-09-02T15:00:00+00:00",
+      "dataSourceReady": true
+    },
+    "procedureOutcome": {
+      "display": "Процедура проведена успішно",
+      "value": "procedure_done",
+      "dataSourceReady": true
+    }
+  }
+}

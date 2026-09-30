@@ -1,0 +1,16 @@
+{
+  "graph1_path": "",
+  "coordinators_path": "",
+  "desktop_eleks_path": "",
+  "ehealth_base_url": "https://ehealth.eleks.com/",
+  "browser_executable": "",
+  "remote_debug_port": 9222,
+  "frm_sheet": "ФРМ",
+  "etft_sheet": "ЕТФТ",
+  "distribution_sheet": "Розподіл АР2",
+  "coordinator_sheet": "",
+  "safe_mode": false,
+  "specialists": {},
+  "schedule_year": 2026,
+  "default_place": "ТОВ 2 Міжнародний центр реабілітації та нейрофізіології"
+}

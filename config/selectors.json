@@ -1,0 +1,396 @@
+{
+  "medical_records": [
+    "text=Медичні записи",
+    "text=Медицинские записи"
+  ],
+  "patient_search": [
+    "css=input[name=\"patientSearch\"]",
+    "placeholder=Введіть дані для пошуку",
+    "placeholder=Введите данные для поиска",
+    "label=Пацієнт",
+    "label=Пациент"
+  ],
+  "search_button": [
+    "role=button|Пошук",
+    "role=button|Поиск",
+    "text=Пошук"
+  ],
+  "interactions": [
+    "text=Взаємодії",
+    "text=Взаимодействия"
+  ],
+  "new_interaction": [
+    "text=Нова взаємодія",
+    "text=Новая взаимодействие",
+    "text=Створити нову взаємодію"
+  ],
+  "create_new_episode": [
+    "text=Створити новий епізод",
+    "text=Создать новый эпизод"
+  ],
+  "referrals": [
+    "text=Направлення",
+    "text=Направления"
+  ],
+  "referral_search_number": [
+    "text=Пошук по номеру",
+    "text=Поиск по номеру"
+  ],
+  "referral_number": [
+    "label=Номер направлення",
+    "label=Номер направления",
+    "placeholder=Номер направлення"
+  ],
+  "choose_referral": [
+    "text=Обрати направлення",
+    "text=Выбрать направление"
+  ],
+  "actions": [
+    "text=Дії",
+    "text=Действия"
+  ],
+  "create_referral": [
+    "text=Створити направлення",
+    "text=Создать направление"
+  ],
+  "procedures": [
+    "text=Процедури",
+    "text=Процедуры"
+  ],
+  "create_procedure": [
+    "text=Створити процедуру",
+    "text=Создать процедуру"
+  ],
+  "electronic_referral": [
+    "role=radio|Електронне направлення",
+    "role=radio|Электронное направление",
+    "label=Електронне направлення",
+    "label=Электронное направление",
+    "text=Електронне направлення",
+    "text=Электронное направление"
+  ],
+  "service_place": [
+    "label=Місце надання послуги",
+    "label=Место оказания услуги"
+  ],
+  "start_datetime": [
+    "label=Початок взаємодії",
+    "label=Начало взаимодействия",
+    "label=Початок прийому",
+    "label=Начало приема",
+    "label=Дата та час виконання"
+  ],
+  "duration": [
+    "label=Тривалість",
+    "label=Продолжительность"
+  ],
+  "sign_later": [
+    "css=div.dx-button[role=\"button\"][aria-label=\"Підписати пізніше\"]",
+    "text=Підписати пізніше",
+    "text=Подписать позже"
+  ],
+  "save_sign": [
+    "text=Зберегти та підписати",
+    "text=Сохранить и подписать"
+  ],
+  "save": [
+    "role=button|Зберегти",
+    "role=button|Сохранить"
+  ],
+  "batch_processing": [
+    "text=Пакетне опрацювання",
+    "text=Пакетная обработка"
+  ],
+  "record_type": [
+    "label=Тип медичного запису",
+    "label=Тип медицинской записи"
+  ],
+  "procedure_type": [
+    "text=Процедура"
+  ],
+  "sign_selected": [
+    "text=Підписати вибрані медичні записи",
+    "text=Подписать выбранные медицинские записи"
+  ],
+  "treatment_plans": [
+    "text=Плани лікування",
+    "text=Планы лечения"
+  ],
+  "create_treatment_plan": [
+    "text=Створити план лікування",
+    "text=Создать план лечения"
+  ],
+  "edit": [
+    "text=Редагувати",
+    "text=Редактировать"
+  ],
+  "create_request": [
+    "text=Створити заявку",
+    "text=Создать заявку"
+  ],
+  "primary_prescription": [
+    "text=Створити первинне призначення",
+    "text=Создать первичное назначение"
+  ],
+  "auth_method": [
+    "text=Обрати метод автентифікації",
+    "text=Выбрать метод аутентификации"
+  ],
+  "auth_access": [
+    "text=Обрати метод автентифікації для доступу",
+    "text=Выбрать метод аутентификации для доступа"
+  ],
+  "otp": [
+    "label=Код",
+    "placeholder=Код",
+    "label=OTP"
+  ],
+  "save_exit": [
+    "text=Зберегти і вийти",
+    "text=Сохранить и выйти"
+  ],
+  "diagnoses": [
+    "text=Діагнози",
+    "text=Диагнозы"
+  ],
+  "diagnostic_reports": [
+    "text=Діагностичні звіти",
+    "text=Диагностические отчеты"
+  ],
+  "examinations": [
+    "text=Обстеження",
+    "text=Обследования"
+  ],
+  "episode_type": [
+    "label=Тип епізоду",
+    "label=Тип эпизода"
+  ],
+  "priority": [
+    "label=Пріоритет",
+    "label=Приоритет"
+  ],
+  "episode_start": [
+    "label=Початок епізоду",
+    "label=Дата початку епізоду",
+    "label=Начало эпизода"
+  ],
+  "episode_name": [
+    "label=Назва епізоду",
+    "label=Название эпизода"
+  ],
+  "direction_self": [
+    "text=Самозвернення",
+    "text=Самообращение"
+  ],
+  "add_action": [
+    "text=Додати дію",
+    "text=Добавить действие"
+  ],
+  "add_diagnosis": [
+    "css=#conditionheader button.icon-add",
+    "text=Додати діагноз",
+    "text=Добавить диагноз"
+  ],
+  "code_search": [
+    "placeholder=Код",
+    "label=Код"
+  ],
+  "choose": [
+    "text=Вибрати",
+    "text=Выбрать"
+  ],
+  "add_selected": [
+    "text=Додати обране",
+    "text=Добавить выбранное"
+  ],
+  "redeem_referral": [
+    "text=Погасити направлення",
+    "text=Погасить направление"
+  ],
+  "templates": [
+    "css=[role='button'][aria-label='Шаблони взаємодій']",
+    "text=Шаблони взаємодій",
+    "text=Шаблоны взаимодействия"
+  ],
+  "organization_templates": [
+    "text=Шаблони установи",
+    "text=Шаблоны учреждения"
+  ],
+  "template_episode_start": [
+    "css=.dx-form-group.dx-group-colcount-2 input[id$='_templateOptionEpisodeDate']",
+    "css=input[id$='_copyOptionEpisodeDate']"
+  ],
+  "template_interaction_start": [
+    "css=.dx-form-group.dx-group-colcount-2 input[id$='_templateOptionEncounterDate']",
+    "css=input[id$='_copyOptionEncounterDate']"
+  ],
+  "diagnostic_report_edit": [
+    "text=Редагувати",
+    "text=Редактировать"
+  ],
+  "report_datetime": [
+    "label=Дата/час діагностичного звіту",
+    "label=Дата/время диагностического отчета",
+    "label=Дата надання послуги",
+    "label=Дата отримання звіту",
+    "label=Дата оказания услуги"
+  ],
+  "conclusion": [
+    "label=Заключення лікаря",
+    "label=Заключение врача"
+  ],
+  "add_examination": [
+    "text=Додати обстеження",
+    "text=Добавить обследование"
+  ],
+  "create_plan": [
+    "text=Створити план лікування",
+    "text=Создать план лечения"
+  ],
+  "take_to_work": [
+    "text=Взяти у роботу",
+    "text=Взяти в роботу",
+    "text=Взять в работу"
+  ],
+  "referral_category": [
+    "label=Категорія направлення",
+    "label=Категория направления"
+  ],
+  "choose_service": [
+    "text=Обрати послугу",
+    "text=Выбрать услугу"
+  ],
+  "nonstationary_rehab": [
+    "text=Нестаціонарна медична реабілітація",
+    "text=Нестационарная медицинская реабилитация"
+  ],
+  "medical_rehab": [
+    "text=Медична реабілітація",
+    "text=Медицинская реабилитация"
+  ],
+  "prescription_code": [
+    "label=Код послуги",
+    "label=Код",
+    "placeholder=Код послуги"
+  ],
+  "prescription_minutes": [
+    "label=Кількість хвилин",
+    "label=Количество минут",
+    "label=Кількість"
+  ],
+  "prescription_duration": [
+    "label=Тривалість призначення",
+    "label=Продолжительность назначения"
+  ],
+  "prescription_duration_unit": [
+    "label=Одиниця тривалості",
+    "label=Единица продолжительности"
+  ],
+  "prescription_start": [
+    "label=Початок періоду",
+    "label=Начало периода"
+  ],
+  "goal": [
+    "label=Ціль",
+    "label=Цель"
+  ],
+  "support_goal": [
+    "text=Підтримка стану пацієнта",
+    "text=Поддержание состояния пациента"
+  ],
+  "primary_prescriptions_section": [
+    "text=Первинні призначення",
+    "text=Первичные назначения"
+  ],
+  "diagnosis_role": [
+    "label=Роль діагнозу",
+    "label=Роль диагноза"
+  ],
+  "diagnosis_certainty": [
+    "label=Статус достовірності",
+    "label=Статус достоверности"
+  ],
+  "diagnosis_clinical": [
+    "label=Клінічний статус",
+    "label=Клинический статус"
+  ],
+  "change": [
+    "text=Змінити",
+    "text=Изменить"
+  ],
+  "interpreting_worker": [
+    "label=Працівник, що інтерпретував результати",
+    "label=Работник, интерпретировавший результаты"
+  ],
+  "diagnostic_executor": [
+    "label=Виконавець діагностики",
+    "label=Исполнитель диагностики"
+  ],
+  "report_submitter": [
+    "label=Ким передано в систему звіт",
+    "label=Кем передан в систему отчет"
+  ],
+  "measurement_datetime": [
+    "label=Дата та час отримання показників",
+    "label=Дата и время получения показателей"
+  ],
+  "interaction_start": [
+    "label=Початок взаємодії",
+    "label=Начало взаимодействия"
+  ],
+  "interaction_end": [
+    "label=Кінець взаємодії",
+    "label=Конец взаимодействия"
+  ],
+  "interaction_class": [
+    "label=Клас",
+    "label=Класс"
+  ],
+  "interaction_type": [
+    "css=input[id$='_encounterType']",
+    "label=Тип взаємодії",
+    "label=Тип взаимодействия"
+  ],
+  "reason_code": [
+    "label=Причина звернення",
+    "label=Причина обращения"
+  ],
+  "paid_service": [
+    "label=Платна послуга",
+    "label=Платная услуга"
+  ],
+  "health40": [
+    "label=Скринінг здоров'я 40+",
+    "label=Скрининг здоровья 40+"
+  ],
+  "interaction_participant": [
+    "css=input[id$='_encounterParticipants']",
+    "label=Учасники взаємодії",
+    "label=Учасник взаємодії",
+    "label=Участник взаимодействия"
+  ],
+  "treating_physician": [
+    "label=Лікуючий лікар",
+    "label=Лечащий врач"
+  ],
+  "diagnosis_installed_at": [
+    "label=Дата/час встановлення діагнозу",
+    "label=Дата/время установления диагноза"
+  ],
+  "diagnosis_cancel": [
+    "role=button|Скасувати",
+    "role=button|Отмена"
+  ],
+  "report_cancel": [
+    "role=button|Скасувати",
+    "role=button|Отмена"
+  ],
+  "redeem_referral_checkbox": [
+    "label=Погасити направлення",
+    "label=Погасить направление"
+  ],
+  "confirm_anyway": [
+    "role=button|Ок, все одно підписати",
+    "role=button|Ок, все равно подписать"
+  ]
+}

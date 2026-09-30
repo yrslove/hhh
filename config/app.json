@@ -1,0 +1,6 @@
+{
+  "host": "127.0.0.1",
+  "preferred_port": 8787,
+  "open_browser": true,
+  "version": "1.0.0"
+}
